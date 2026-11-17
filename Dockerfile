@@ -1,6 +1,6 @@
 FROM n8nio/n8n:latest
 
-ENV N8N_ENCRYPTION_KEY=1e85c831e58ed691d17e5ce76eb4c41569ab717ef5015119a41349c37aa04f0b
-ENV GENERIC_TIMEZONE="Europe/Madrid"
-
+# Pass N8N_ENCRYPTION_KEY securely through deployment environment variables.
+# Preserve the original key until existing credentials have been migrated/re-encrypted.
+ENV GENERIC_TIMEZONE=Europe/Madrid
 EXPOSE 5678
